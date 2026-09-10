@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NowCard Merchant — Today’s rate</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="merchant.css" />
+</head>
+<body class="dash-body">
+  <header class="nav">
+    <a class="logo" href="index.html">
+      <span class="logo-mark">N</span>
+      <span class="logo-word">NowCard</span>
+    </a>
+    <nav class="nav-links">
+      <a href="merchant.html">Today</a>
+      <a href="#sale">On sale</a>
+      <a href="#settle">Settlement</a>
+    </nav>
+    <div class="nav-cta">
+      <span class="store-chip">Grove Market · Midtown</span>
+      <a class="btn ghost" href="index.html">Shopper view</a>
+    </div>
+  </header>
+  <main class="dash">
+    <section class="dash-hero">
+      <div>
+        <p class="eyebrow"><span class="live-dot"></span> Member merchant console</p>
+        <h1>Set today’s rate.<br />Flash two things. Close the door.</h1>
+        <p class="lede tight">One rate for the calendar day. Thresholds people can remember. A glimpse of Now on Sale — not a catalog. Shoppers already nearby see you before they default to a chain.</p>
+      </div>
+      <div class="stat-row">
+        <article><b id="statTickets">18</b><span>NowCard tickets today</span></article>
+        <article><b id="statLift">+$214</b><span>attributed basket lift</span></article>
+        <article><b id="statHours">4h 12m</b><span>until rate expires</span></article>
+      </div>
+    </section>
+    <section class="dash-grid">
+      <div class="panel">
+        <header class="panel-h"><h2>Today’s rate</h2><span class="status" id="pubStatus">Draft</span></header>
+        <p class="field-label">Discount</p>
+        <div class="seg" id="rateSeg" role="group" aria-label="Daily rate">
+          <button type="button" data-rate="2">2%</button>
+          <button type="button" data-rate="3" class="on">3%</button>
+          <button type="button" data-rate="5">5%</button>
+        </div>
+        <p class="field-label">Unlock after</p>
+        <div class="seg" id="thSeg" role="group" aria-label="Spend threshold">
+          <button type="button" data-th="25">$25</button>
+          <button type="button" data-th="35" class="on">$35</button>
+          <button type="button" data-th="50">$50</button>
+        </div>
+        <p class="hint" id="pairHint">Suggested pair: 3% after $35 — enough to feel, cheap enough to post on a Tuesday.</p>
+        <label class="field-label" for="closeAt">Expires at close</label>
+        <input id="closeAt" type="time" value="19:00" />
+        <div class="actions">
+          <button class="btn solid" id="publishBtn" type="button">Publish for today</button>
+          <button class="btn ghost" id="pauseBtn" type="button">Pause rate</button>
+        </div>
+      </div>
+      <div class="panel" id="sale">
+        <header class="panel-h"><h2>Now on Sale glimpse</h2><span class="fine-inline">Max 3 items</span></header>
+        <p class="hint">Enough to pull someone in the door. Not a full inventory feed.</p>
+        <div id="saleFields"></div>
+        <button class="btn ghost" id="addSale" type="button">Add a glimpse</button>
+      </div>
+      <div class="panel preview-pane">
+        <header class="panel-h"><h2>Shopper card</h2><span class="fine-inline">What appears in the helper</span></header>
+        <article class="live-card" id="liveCard">
+          <div class="live-top"><strong>Grove Market</strong><em id="livePct">3%</em></div>
+          <p id="liveRule">Unlock after $35 · NowCard on file</p>
+          <p id="liveClock">Expires 7:00 PM</p>
+          <ul id="liveSale"></ul>
+        </article>
+      </div>
+    </section>
+    <section class="panel settle" id="settle">
+      <header class="panel-h"><h2>Settlement</h2><span class="fine-inline">Stripe + Fintec bridge</span></header>
+      <div class="settle-grid">
+        <div>
+          <h3>How a ticket clears</h3>
+          <ol>
+            <li>Shopper pays with the tokenized card already on file.</li>
+            <li>Authorization carries today’s rate and threshold from the merchant membership record.</li>
+            <li>If the ticket clears the threshold, the discount is applied in the capture path.</li>
+            <li>NowCard never receives PAN. Stripe and the issuing Fintec hold the vault.</li>
+          </ol>
+        </div>
+        <div class="ledger">
+          <div><span>Posted rate</span><b id="ledRate">3% after $35</b></div>
+          <div><span>Tickets over threshold</span><b>11 of 18</b></div>
+          <div><span>Discount funded today</span><b>$42.80</b></div>
+          <div><span>Net to Grove Market</span><b>$1,186.20</b></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="js/merchant.js"></script>
+</body>
+</html>
