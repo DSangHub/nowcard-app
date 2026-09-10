@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NowCard — A shopping helper for Now Shopping</title>
+  <meta name="description" content="Write a list from where you are. Nearby member merchants offer timed discounts for the day. Pay with NowCard on file. Merchants fill empty hours. You save. Nobody stores your card numbers." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <header class="nav">
+    <a class="logo" href="#top" aria-label="NowCard home">
+      <span class="logo-mark">N</span>
+      <span class="logo-word">NowCard</span>
+    </a>
+    <nav class="nav-links">
+      <a href="#how">How it works</a>
+      <a href="#rates">Today’s rates</a>
+      <a href="#sale">On sale</a>
+      <a href="merchant.html">Merchants</a>
+      <a href="#card">The card</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="btn ghost" href="#demo">Open helper</a>
+      <a class="btn solid" href="#apply">Get a NowCard</a>
+    </div>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu"><span></span><span></span></button>
+  </header>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#how">How it works</a>
+    <a href="#rates">Today’s rates</a>
+    <a href="#sale">On sale</a>
+    <a href="merchant.html">Merchants</a>
+    <a href="#card">The card</a>
+    <a href="#demo">Open helper</a>
+    <a href="#apply">Get a NowCard</a>
+  </div>
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="live-dot"></span> nowcard.app · local, timed, today only</p>
+        <h1>A shopping helper<br />for <em>Now</em> Shopping.</h1>
+        <p class="lede">Drop a pin. Write the list. Nearby member merchants post timed discounts for the day — <strong>2%, 3%, or 5%</strong> once you clear <strong>$25, $35, or $50</strong>. Pay with NowCard on file. They fill the quiet hours. You leave with more.</p>
+        <div class="hero-actions">
+          <a class="btn solid lg" href="#demo">Write today’s list</a>
+          <a class="btn ghost lg" href="merchant.html">I’m a merchant</a>
+        </div>
+        <ul class="trust-row">
+          <li>No PAN stored</li>
+          <li>Stripe + Fintec bridge</li>
+          <li>1-click apply at member Fintecs</li>
+        </ul>
+      </div>
+      <div class="hero-stage">
+        <div class="phone">
+          <div class="phone-notch"></div>
+          <div class="phone-screen">
+            <div class="app-bar"><span>Near Midtown · 0.4 mi</span><span class="pill now">TODAY</span></div>
+            <div class="list-card">
+              <h3>Saturday list</h3>
+              <ul>
+                <li><span></span>sourdough + butter</li>
+                <li><span></span>oat milk</li>
+                <li class="hit"><span></span>coffee beans · on sale at Grove</li>
+                <li><span></span>dish soap</li>
+              </ul>
+            </div>
+            <div class="offer-stack">
+              <article class="offer"><div><strong>Grove Market</strong><small>closes in 4h 12m</small></div><div class="pct">5%</div><p>after $50 · NowCard on file</p></article>
+              <article class="offer dim"><div><strong>Cedar Hardware</strong><small>0.7 mi</small></div><div class="pct">3%</div><p>after $35</p></article>
+            </div>
+          </div>
+        </div>
+        <div class="float-card"><div class="chip"></div><div class="card-brand">NOWCARD</div><div class="card-meta"><span>•••• 4412</span><span>MEMBER</span></div></div>
+        <div class="stamp">NOW<br />ON SALE</div>
+      </div>
+    </section>
+    <section class="strip" id="rates">
+      <div class="strip-inner">
+        <p>Member merchants set one rate for the day. Thresholds stay simple.</p>
+        <div class="tiers">
+          <div class="tier"><span class="tier-pct">2%</span><span class="tier-rule">after $25</span></div>
+          <div class="tier featured"><span class="tier-pct">3%</span><span class="tier-rule">after $35</span></div>
+          <div class="tier"><span class="tier-pct">5%</span><span class="tier-rule">after $50</span></div>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="how">
+      <header class="section-head"><p class="eyebrow">How Now Shopping works</p><h2>Location writes the list.<br />The day writes the price.</h2></header>
+      <div class="steps">
+        <article class="step"><span class="n">01</span><h3>Stand where you shop</h3><p>Geolocation opens a radius of member merchants. You write the list once — milk, nails, a birthday candle — instead of opening six store apps.</p></article>
+        <article class="step"><span class="n">02</span><h3>See today’s timed rate</h3><p>Each merchant posts one discount for the day: 2, 3, or 5 percent, unlocked at $25, $35, or $50. When the clock hits close, the rate expires.</p></article>
+        <article class="step"><span class="n">03</span><h3>Pay with NowCard on file</h3><p>The discount is applied at the terminal or online checkout because NowCard is already tokenized onto the card you already use. No coupon code ballet.</p></article>
+      </div>
+    </section>
+    <section class="demo-wrap" id="demo">
+      <header class="section-head"><p class="eyebrow">Try the helper</p><h2>Write a list. Watch nearby rates appear.</h2><p class="sub">Demo uses a mock Midtown radius. Your real list never leaves the device in this preview.</p></header>
+      <div class="demo">
+        <div class="demo-col">
+          <label class="field-label" for="listInput">Today’s list</label>
+          <textarea id="listInput" rows="6" placeholder="sourdough&#10;oat milk&#10;coffee beans&#10;tulips"></textarea>
+          <div class="demo-actions">
+            <button class="btn solid" id="locateBtn" type="button">Use this location</button>
+            <button class="btn ghost" id="clearBtn" type="button">Clear</button>
+          </div>
+          <p class="fine" id="geoStatus">Waiting for a list and a pin.</p>
+        </div>
+        <div class="demo-col">
+          <p class="field-label">Nearby member merchants</p>
+          <div id="merchantResults" class="results empty"><p>Add a few items, then drop a pin. We’ll match the list to what’s on sale nearby today.</p></div>
+        </div>
+      </div>
+    </section>
+    <section class="section sale" id="sale">
+      <header class="section-head"><p class="eyebrow">Now on Sale</p><h2>Merchants offer a glimpse — not a catalog.</h2><p class="sub">Enough to pull you in the door. Not enough to replace walking the aisle.</p></header>
+      <div class="sale-grid">
+        <article class="sale-card"><div class="sale-tag">Grove Market · 5%</div><h3>Single-origin beans</h3><p>Ethiopia Guji, 12 oz. In through Sunday close.</p></article>
+        <article class="sale-card"><div class="sale-tag">Cedar Hardware · 3%</div><h3>Spring clamps, 4-pack</h3><p>The ones that actually hold a jig.</p></article>
+        <article class="sale-card"><div class="sale-tag">Lumen Florist · 2%</div><h3>Ranunculus bunches</h3><p>Cool-room surplus. Today only.</p></article>
+        <article class="sale-card"><div class="sale-tag">Harbor Fish · 5%</div><h3>Day-boat rockfish</h3><p>Landed this morning. After $50 ticket.</p></article>
+      </div>
+    </section>
+    <section class="split" id="merchants">
+      <div class="split-pane dark">
+        <p class="eyebrow light">For member merchants</p>
+        <h2>Fill the hours that used to sit empty.</h2>
+        <p>You pick one rate for the day. You flash two or three Now on Sale items. Shoppers already nearby see you before they default to a chain.</p>
+        <ul class="checks">
+          <li>One daily rate. No coupon stack to manage.</li>
+          <li>Thresholds people can remember: $25 / $35 / $50.</li>
+          <li>Settlement through the Stripe and Fintec bridge.</li>
+          <li>You never receive raw card numbers from NowCard.</li>
+        </ul>
+        <a class="btn solid invert" href="merchant.html">Open merchant console</a>
+      </div>
+      <div class="split-pane paper">
+        <p class="eyebrow">For shoppers</p>
+        <h2>The list you were going to write anyway.</h2>
+        <p>NowCard sits on top of the card already in your pocket, and only speaks when a member merchant around you posted a rate for today.</p>
+        <ul class="checks dark-check">
+          <li>Geolocation scopes the map. No national junk mail.</li>
+          <li>Timed discounts die at close. No zombie codes.</li>
+          <li>Link via API to the everyday card you already swipe.</li>
+          <li>Want plastic? One-click apply at a member Fintec.</li>
+        </ul>
+        <a class="btn solid" href="#demo">Start a list</a>
+      </div>
+    </section>
+    <section class="section card-sec" id="card">
+      <header class="section-head"><p class="eyebrow">The card, without the vault</p><h2>NowCard never sees or stores sensitive data.</h2><p class="sub">We tokenize. Partners authorize. Your PAN stays with Stripe and the issuing Fintec.</p></header>
+      <div class="arch">
+        <article><h3>Link the card you have</h3><p>An API lets you attach NowCard benefits to an existing everyday-use card. The day’s rate attaches in the authorization path.</p></article>
+        <article><h3>Or apply for a NowCard</h3><p>One click routes the application to a member Fintec. They underwrite. They issue. We never hold the application file.</p></article>
+        <article><h3>Stripe + Fintec bridge</h3><p>Merchant rate for the day, spend threshold, tokenized instrument, settlement. Sensitive fields terminate at PCI-scoped partners.</p></article>
+      </div>
+      <div class="privacy-bar">
+        <div><strong>What we keep</strong><p>Merchant membership, daily rate, threshold, token references, anonymized radius events.</p></div>
+        <div><strong>What we never keep</strong><p>Primary account numbers, CVV, full track data, government ID images, raw precise trails.</p></div>
+      </div>
+    </section>
+    <section class="apply" id="apply">
+      <div class="apply-card">
+        <p class="eyebrow">Get in</p>
+        <h2>Want an actual NowCard?</h2>
+        <p>Apply with one click through a member Fintec. Or link the card already in your wallet.</p>
+        <form class="apply-form" id="applyForm">
+          <div class="row">
+            <label>Name<input type="text" name="name" placeholder="Alex Rivera" required /></label>
+            <label>Email<input type="email" name="email" placeholder="alex@example.com" required /></label>
+          </div>
+          <fieldset>
+            <legend>I am</legend>
+            <label class="radio"><input type="radio" name="role" value="shopper" checked /> a shopper</label>
+            <label class="radio"><input type="radio" name="role" value="merchant" /> a merchant</label>
+            <label class="radio"><input type="radio" name="role" value="fintec" /> a Fintec / issuer</label>
+          </fieldset>
+          <label>City<input type="text" name="city" placeholder="Sacramento" /></label>
+          <button class="btn solid lg" type="submit">Send one-click interest</button>
+          <p class="fine" id="formNote">This preview stores nothing on a server.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer class="foot">
+    <div><span class="logo-mark sm">N</span><strong>NowCard</strong><p>A shopping helper for Now Shopping. nowcard.app</p></div>
+    <div><p>NowCard does not see or store sensitive payment data. Processing is bridged to Stripe and member Fintecs.</p><p class="muted">© 2026 NowCard. Concept preview — not a live financial product.</p></div>
+  </footer>
+  <script src="js/app.js"></script>
+</body>
+</html>
